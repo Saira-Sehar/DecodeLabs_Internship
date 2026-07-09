@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>ShopVault | Your Premium Online Marketplace</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span>Welcome! <a href="#">Sign in</a> or <a href="#">register</a></span>
+                <span class="separator">|</span>
+                <a href="#">Daily Deals</a>
+                <span class="separator">|</span>
+                <a href="#">Brand Outlet</a>
+                <span class="separator">|</span>
+                <a href="#">Help & Contact</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+                <span class="separator">|</span>
+                <a href="#"><i class="fa-solid fa-heart"></i> Watchlist <span class="watchlist-count">0</span></a>
+                <span class="separator">|</span>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-count-top">0</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-main">
+                <a href="#" class="logo" id="logoLink">
+                    <div class="logo-icon-wrapper">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div class="logo-text-wrapper">
+                        <span class="logo-main">Shop</span>
+                        <span class="logo-accent">Vault</span>
+                    </div>
+                </a>
+                
+                <div class="search-bar">
+                    <div class="search-category">
+                        <select id="searchCategory">
+                            <option value="all">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="home">Home & Garden</option>
+                            <option value="sports">Sports</option>
+                            <option value="motors">Motors</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="jewelry">Jewelry</option>
+                            <option value="books">Books</option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Search for anything..." class="search-input" id="searchInput" />
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search</span>
+                    </button>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn">
+                        <i class="fa-solid fa-user"></i>
+                        <span>My Account</span>
+                    </button>
+                    <button class="action-btn cart-btn" id="cartBtn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <button class="nav-toggle" id="navToggle">
+                <i class="fa-solid fa-bars"></i>
+                <span>Shop by Category</span>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="nav-link active" data-nav="all">All Products</a></li>
+                <li><a href="#products" class="nav-link" data-nav="electronics">Electronics</a></li>
+                <li><a href="#products" class="nav-link" data-nav="fashion">Fashion</a></li>
+                <li><a href="#products" class="nav-link" data-nav="home">Home & Garden</a></li>
+                <li><a href="#products" class="nav-link" data-nav="sports">Sports</a></li>
+                <li><a href="#products" class="nav-link" data-nav="motors">Motors</a></li>
+                <li><a href="#products" class="nav-link" data-nav="gaming">Gaming</a></li>
+                <li><a href="#products" class="nav-link sale-link" data-nav="deals">Deals</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="banner-slider">
+                <div class="banner-slide active">
+                    <div class="banner-content">
+                        <span class="banner-tag">Limited Time Offer</span>
+                        <h1>Discover Premium Brands at <span class="highlight-text">Unbeatable Prices</span></h1>
+                        <p>Shop thousands of products with free shipping on orders over $50. Your trusted marketplace for quality goods.</p>
+                        <div class="banner-buttons">
+                            <a href="#products" class="banner-btn primary-banner" data-banner="electronics">
+                                Shop Electronics <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="#products" class="banner-btn secondary-banner" data-banner="deals">
+                                View Deals <i class="fa-solid fa-tag"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="banner-image">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=800&auto=format&fit=crop" alt="Premium Electronics" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fa-solid fa-shield-check"></i>
+                    <div>
+                        <h4>Secure Shopping</h4>
+                        <p>256-bit SSL encryption</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-medal"></i>
+                    <div>
+                        <h4>Verified Sellers</h4>
+                        <p>Quality guaranteed</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <div>
+                        <h4>Buyer Protection</h4>
+                        <p>Full money-back guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-label">Browse Categories</span>
+                <h2 class="section-title">Explore Popular Categories</h2>
+                <p class="section-desc">Find exactly what you're looking for from our wide selection</p>
+            </div>
+            <div class="categories-grid">
+                <a href="#products" class="category-card" data-category="electronics">
+                    <div class="category-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <span>Electronics</span>
+                    <small>2.5k+ Products</small>
+                </a>
+                <a href="#products" class="category-card" data-category="fashion">
+                    <div class="category-icon"><i class="fa-solid fa-shirt"></i></div>
+                    <span>Fashion</span>
+                    <small>5k+ Products</small>
+                </a>
+                <a href="#products" class="category-card" data-category="home">
+                    <div class="category-icon"><i class="fa-solid fa-couch"></i></div>
+                    <span>Home & Garden</span>
+                    <small>3k+ Products</small>
+                </a>
+                <a href="#products" class="category-card" data-category="sports">
+                    <div class="category-icon"><i class="fa-solid fa-futbol"></i></div>
+                    <span>Sports</span>
+                    <small>1.8k+ Products</small>
+                </a>
+                <a href="#products" class="category-card" data-category="motors">
+                    <div class="category-icon"><i class="fa-solid fa-car"></i></div>
+                    <span>Motors</span>
+                    <small>900+ Products</small>
+                </a>
+                <a href="#products" class="category-card" data-category="jewelry">
+                    <div class="category-icon"><i class="fa-solid fa-gem"></i></div>
+                    <span>Jewelry</span>
+                    <small>2k+ Products</small>
+                </a>
+                <a href="#products" class="category-card" data-category="gaming">
+                    <div class="category-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <span>Gaming</span>
+                    <small>1.5k+ Products</small>
+                </a>
+                <a href="#products" class="category-card" data-category="books">
+                    <div class="category-icon"><i class="fa-solid fa-book"></i></div>
+                    <span>Books</span>
+                    <small>4k+ Products</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-label">Trending Now</span>
+                    <h2 class="section-title" id="productSectionTitle">All Products</h2>
+                    <p class="section-subtitle" id="productCount">Showing 12 products</p>
+                </div>
+                <div class="section-actions">
+                    <div class="filter-sort">
+                        <select id="sortSelect" class="sort-select">
+                            <option value="default">Sort by: Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="discount">Biggest Discount</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Active Filter Tags -->
+            <div class="active-filters" id="activeFilters" style="display: none;">
+                <span class="filter-label">Active Filter:</span>
+                <span class="filter-tag" id="filterTag">
+                    <span id="filterTagText"></span>
+                    <button class="remove-filter" id="removeFilter"><i class="fa-solid fa-xmark"></i></button>
+                </span>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products rendered by JavaScript -->
+            </div>
+            
+            <div class="load-more" id="loadMoreContainer">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Products <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            
+            <div class="no-products" id="noProducts" style="display: none;">
+                <i class="fa-solid fa-box-open"></i>
+                <h3>No products found</h3>
+                <p>Try adjusting your filters or search criteria</p>
+                <button class="reset-btn" id="resetFiltersBtn">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h3>Shopping Cart (<span id="cartItemCount">0</span>)</h3>
+                <button class="cart-close" id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="cart-empty">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div>
+                        <h4>Free Shipping</h4>
+                        <p>On orders over $50</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <h4>Buyer Protection</h4>
+                        <p>Money-back guarantee</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <div>
+                        <h4>30-Day Returns</h4>
+                        <p>Hassle-free returns</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-headset"></i>
+                    <div>
+                        <h4>24/7 Support</h4>
+                        <p>Always here to help</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand-col">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-store"></i>
+                        <span>Shop<span class="logo-accent">Vault</span></span>
+                    </div>
+                    <p>Your trusted online marketplace for premium products at unbeatable prices. Shop with confidence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Buy</h4>
+                    <ul>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Money Back Guarantee</a></li>
+                        <li><a href="#">Bidding & Buying Help</a></li>
+                        <li><a href="#">Stores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sell</h4>
+                    <ul>
+                        <li><a href="#">Start Selling</a></li>
+                        <li><a href="#">Learn to Sell</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Seller Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About ShopVault</h4>
+                    <ul>
+                        <li><a href="#">Company Info</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Connected</h4>
+                    <div class="newsletter">
+                        <p>Subscribe for exclusive offers</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Your email address" />
+                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShopVault. All rights reserved. This is a demo project for educational purposes.</p>
+                <div class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
