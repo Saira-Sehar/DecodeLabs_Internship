@@ -1,0 +1,336 @@
+# 🛒 ShopVault - Premium Online Marketplace
+
+![Status](https://img.shields.io/badge/status-active-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+> A fully functional e-commerce marketplace built with vanilla HTML, CSS & JavaScript — ideal for internship projects and portfolio demos.
+
+---
+
+## 📸 Preview
+
+![ShopVault Banner](https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1200&auto=format&fit=crop)
+
+---
+
+## ✨ Features
+
+- **16 Products** across 8 categories
+- **Category Filtering** via navbar, cards, and hero buttons
+- **Search** with real-time results
+- **Sorting** by price, rating, and discount
+- **Shopping Cart** with add/remove and quantity tracking
+- **Wishlist** with toggle functionality
+- **Responsive Design** for mobile, tablet, and desktop
+- **Cart Sidebar** with slide-in panel
+- **Toast Notifications** for user actions
+- **Load More** pagination
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Structure |
+| CSS3 | Styling, animations, responsive design |
+| JavaScript (ES6+) | DOM manipulation, state management |
+| Font Awesome 6 | Icons |
+| Google Fonts | Typography |
+| Unsplash | Images |
+
+**Zero dependencies — no frameworks or build tools.**
+
+---
+
+## 📁 Project Structure
+shopvault/
+├── index.html # Main HTML
+├── style.css # Stylesheet
+├── script.js # Functionality
+└── README.md # Documentation
+
+text
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/shopvault.git
+
+# Navigate to folder
+cd shopvault
+
+# Open in browser
+open index.html
+Or deploy directly to GitHub Pages:
+
+Settings → Pages
+
+Select main branch
+
+Save
+
+📱 Responsive Breakpoints
+Device	Width	Layout
+Desktop	1024px+	Full layout
+Tablet	768px	Stacked sections
+Mobile	480px	Single column, hamburger menu
+⚙️ Core Functionality
+javascript
+getFilteredProducts()   // Filter & sort products
+renderProducts()        // Render to DOM
+addToCart(id)           // Add item to cart
+removeFromCart(id)      // Remove from cart
+toggleWishlist(id)      // Toggle wishlist
+showNotification(msg)   // Toast messages
+🎨 Design System
+Element	Value
+Primary	#4f46e5
+Accent	#f59e0b
+Font	Inter + Poppins
+Shadows	sm / md / lg / xl
+Radius	6px - 20px
+📊 Product Categories
+Electronics · Fashion · Home & Garden · Sports · Gaming · Motors · Jewelry · Books
+
+🔮 Roadmap
+LocalStorage persistence
+
+Product detail pages
+
+User authentication
+
+Backend API integration
+
+Dark mode
+
+# 🛒 ShopVault - Premium Online Marketplace
+
+![Status](https://img.shields.io/badge/status-active-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+> A fully functional e-commerce marketplace built with vanilla HTML, CSS & JavaScript — ideal for internship projects and portfolio demos.
+
+---
+
+## 📸 Preview
+
+![ShopVault Banner](https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1200&auto=format&fit=crop)
+
+---
+
+## ✨ Features
+
+- **16 Products** across 8 categories
+- **Category Filtering** via navbar, cards, and hero buttons
+- **Search** with real-time results
+- **Sorting** by price, rating, and discount
+- **Shopping Cart** with add/remove and quantity tracking
+- **Wishlist** with toggle functionality
+- **Responsive Design** for mobile, tablet, and desktop
+- **Cart Sidebar** with slide-in panel
+- **Toast Notifications** for user actions
+- **Load More** pagination
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Structure |
+| CSS3 | Styling, animations, responsive design |
+| JavaScript (ES6+) | DOM manipulation, state management |
+| Font Awesome 6 | Icons |
+| Google Fonts | Typography |
+| Unsplash | Images |
+
+**Zero dependencies — no frameworks or build tools.**
+
+---
+
+## 📁 Project Structure
+shopvault/
+├── index.html # Main HTML
+├── style.css # Stylesheet
+├── script.js # Functionality
+└── README.md # Documentation
+
+text
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/shopvault.git
+
+# Navigate to folder
+cd shopvault
+
+# Open in browser
+open index.html
+Or deploy directly to GitHub Pages:
+
+Settings → Pages
+
+Select main branch
+
+Save
+
+📱 Responsive Breakpoints
+Device	Width	Layout
+Desktop	1024px+	Full layout
+Tablet	768px	Stacked sections
+Mobile	480px	Single column, hamburger menu
+⚙️ Core Functionality
+javascript
+getFilteredProducts()   // Filter & sort products
+renderProducts()        // Render to DOM
+addToCart(id)           // Add item to cart
+removeFromCart(id)      // Remove from cart
+toggleWishlist(id)      // Toggle wishlist
+showNotification(msg)   // Toast messages
+🎨 Design System
+Element	Value
+Primary	#4f46e5
+Accent	#f59e0b
+Font	Inter + Poppins
+Shadows	sm / md / lg / xl
+Radius	6px - 20px
+📊 Product Categories
+Electronics · Fashion · Home & Garden · Sports · Gaming · Motors · Jewelry · Books
+
+🔮 Roadmap
+LocalStorage persistence
+
+Product detail pages
+
+User authentication
+
+Backend API integration
+
+Dark mode
+
+# 🛒 ShopVault - Premium Online Marketplace
+
+![Status](https://img.shields.io/badge/status-active-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+> A fully functional e-commerce marketplace built with vanilla HTML, CSS & JavaScript — ideal for internship projects and portfolio demos.
+
+---
+
+## 📸 Preview
+
+![ShopVault Banner](https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1200&auto=format&fit=crop)
+
+---
+
+## ✨ Features
+
+- **16 Products** across 8 categories
+- **Category Filtering** via navbar, cards, and hero buttons
+- **Search** with real-time results
+- **Sorting** by price, rating, and discount
+- **Shopping Cart** with add/remove and quantity tracking
+- **Wishlist** with toggle functionality
+- **Responsive Design** for mobile, tablet, and desktop
+- **Cart Sidebar** with slide-in panel
+- **Toast Notifications** for user actions
+- **Load More** pagination
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Structure |
+| CSS3 | Styling, animations, responsive design |
+| JavaScript (ES6+) | DOM manipulation, state management |
+| Font Awesome 6 | Icons |
+| Google Fonts | Typography |
+| Unsplash | Images |
+
+**Zero dependencies — no frameworks or build tools.**
+
+---
+
+## 📁 Project Structure
+shopvault/
+├── index.html # Main HTML
+├── style.css # Stylesheet
+├── script.js # Functionality
+└── README.md # Documentation
+
+text
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/shopvault.git
+
+# Navigate to folder
+cd shopvault
+
+# Open in browser
+open index.html
+Or deploy directly to GitHub Pages:
+
+Settings → Pages
+
+Select main branch
+
+Save
+
+📱 Responsive Breakpoints
+Device	Width	Layout
+Desktop	1024px+	Full layout
+Tablet	768px	Stacked sections
+Mobile	480px	Single column, hamburger menu
+⚙️ Core Functionality
+javascript
+getFilteredProducts()   // Filter & sort products
+renderProducts()        // Render to DOM
+addToCart(id)           // Add item to cart
+removeFromCart(id)      // Remove from cart
+toggleWishlist(id)      // Toggle wishlist
+showNotification(msg)   // Toast messages
+🎨 Design System
+Element	Value
+Primary	#4f46e5
+Accent	#f59e0b
+Font	Inter + Poppins
+Shadows	sm / md / lg / xl
+Radius	6px - 20px
+📊 Product Categories
+Electronics · Fashion · Home & Garden · Sports · Gaming · Motors · Jewelry · Books
+
+🔮 Roadmap
+LocalStorage persistence
+
+Product detail pages
+
+User authentication
+
+Backend API integration
+
+Dark mode
+
