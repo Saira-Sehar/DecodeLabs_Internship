@@ -1,0 +1,134 @@
+# TaskFlow - Interactive Task Manager
+
+![Status](https://img.shields.io/badge/status-active-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+
+> Project 3 — Interactive Web Elements | Internship Task
+
+---
+
+## 📋 Overview
+
+**TaskFlow** is an interactive task management application built with vanilla HTML, CSS, and JavaScript. It demonstrates the **IPO Model (Input → Process → Output)** through DOM manipulation, event handling, and state management — meeting all Project 3 requirements.
+
+---
+
+## 🎯 Learning Objectives
+
+| Concept | Implementation |
+|---------|---------------|
+| DOM Selection | `querySelector`, `getElementById` |
+| Event Listeners | `click`, `submit`, `input`, `keydown` |
+| State Management | Variables + localStorage |
+| Dynamic Updates | `textContent`, `innerHTML` (sanitized) |
+| Class Toggling | `classList.toggle()` |
+| const vs let | const for DOM refs, let for state |
+
+---
+
+## ✨ Features
+
+- **Add/Delete Tasks** — Full CRUD operations
+- **Complete Tasks** — Toggle with checkbox
+- **Important Flag** — Star important tasks
+- **Priority Levels** — Low / Medium / High
+- **Filter System** — All / Active / Completed / Important
+- **Search** — Real-time task filtering
+- **Dark Mode** — Theme toggle with CSS variables
+- **Statistics** — Live task metrics dashboard
+- **Keyboard Shortcuts** — Ctrl+K to search
+- **Local Storage** — Persistent data
+- **Toast Notifications** — User feedback
+- **Responsive Design** — Mobile-friendly sidebar
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5** — Semantic structure
+- **CSS3** — Variables, Grid, Flexbox, Dark Mode
+- **JavaScript (ES6+)** — DOM, Events, State
+- **Font Awesome 6** — Icons
+- **Google Fonts** — Inter + Poppins
+
+**Zero dependencies. No frameworks.**
+
+---
+
+## 📁 Project Structure
+taskflow/
+├── index.html # Structure
+├── style.css # Styling + Dark Mode
+├── script.js # All functionality
+└── README.md # Documentation
+
+text
+
+---
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/yourusername/taskflow.git
+cd taskflow
+open index.html
+📐 IPO Model Implementation
+text
+INPUT               PROCESS             OUTPUT
+─────────────────────────────────────────────────
+User clicks Add     → validateInput()   → Task appears in list
+User clicks checkbox → toggleComplete() → Text strikethrough
+User clicks star    → toggleImportant() → Star fills yellow
+User clicks filter  → setFilter()       → List filters
+User clicks theme   → toggleDarkMode()  → Theme changes
+User types search   → filterTasks()     → Results update
+📊 State Variables
+javascript
+let tasks = [];           // Task array
+let currentFilter = 'all'; // Active filter
+let currentPriority = 'medium'; // Default priority
+let isDarkMode = false;   // Theme state
+✅ Project 3 Checklist
+HTML page structure
+
+CSS styling with variables
+
+JavaScript file (separate)
+
+DOM element selection
+
+Multiple event listeners
+
+Functions for logic
+
+const and let usage
+
+State variables
+
+Dynamic content updates
+
+classList.toggle() usage
+
+textContent for safe updates
+
+Clean HTML/CSS/JS separation
+
+Input → Process → Output flow
+
+📱 Responsive Breakpoints
+Device	Width	Behavior
+Desktop	1024px+	Sidebar visible
+Tablet	768px	Collapsible sidebar
+Mobile	480px	Full-width, stacked
+🔮 Key Functions
+javascript
+addTask()          // Create new task
+deleteTask()       // Remove task
+toggleComplete()   // Mark complete/incomplete
+toggleImportant()  // Star/unstar task
+setFilter()        // Apply category filter
+renderAll()        // Update DOM
+saveToStorage()    // Persist to localStorage
+showToast()        // Display notification
