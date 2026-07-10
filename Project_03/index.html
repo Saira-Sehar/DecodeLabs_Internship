@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>TaskFlow | Smart Task Manager</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <span class="logo-text">Task<span>Flow</span></span>
+                </div>
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-filter="all">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>All Tasks</span>
+                    <span class="nav-count" id="countAll">0</span>
+                </a>
+                <a href="#" class="nav-item" data-filter="active">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Active</span>
+                    <span class="nav-count" id="countActive">0</span>
+                </a>
+                <a href="#" class="nav-item" data-filter="completed">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Completed</span>
+                    <span class="nav-count" id="countCompleted">0</span>
+                </a>
+                <a href="#" class="nav-item" data-filter="important">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Important</span>
+                    <span class="nav-count" id="countImportant">0</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Top Bar -->
+            <header class="topbar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <div class="topbar-title">
+                    <h1>My Tasks</h1>
+                    <p class="date-display" id="dateDisplay"></p>
+                </div>
+                
+                <div class="topbar-actions">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search tasks..." id="searchInput" class="js-search-input" />
+                    </div>
+                    <button class="btn-icon" id="clearCompletedBtn" title="Clear completed">
+                        <i class="fa-solid fa-broom"></i>
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Stats Cards -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon total">
+                        <i class="fa-solid fa-list-ul"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="statTotal">0</span>
+                        <span class="stat-label">Total Tasks</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon active">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="statActive">0</span>
+                        <span class="stat-label">In Progress</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon completed">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="statCompleted">0</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon productivity">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="statProductivity">0%</span>
+                        <span class="stat-label">Productivity</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Add Task Form -->
+            <section class="task-form-section">
+                <form class="task-form" id="taskForm">
+                    <div class="form-row">
+                        <input 
+                            type="text" 
+                            placeholder="What needs to be done?" 
+                            class="task-input js-task-input" 
+                            id="taskInput" 
+                            required 
+                            autocomplete="off"
+                        />
+                        <div class="form-actions">
+                            <button type="button" class="priority-btn js-priority-btn" id="priorityBtn" data-priority="medium" title="Set priority">
+                                <i class="fa-solid fa-flag"></i>
+                                <span>Medium</span>
+                            </button>
+                            <button type="submit" class="add-btn js-add-btn" id="addTaskBtn">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>Add Task</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="priority-dropdown" id="priorityDropdown">
+                        <button type="button" data-priority="low" class="priority-option">
+                            <i class="fa-solid fa-flag priority-low"></i> Low Priority
+                        </button>
+                        <button type="button" data-priority="medium" class="priority-option">
+                            <i class="fa-solid fa-flag priority-medium"></i> Medium Priority
+                        </button>
+                        <button type="button" data-priority="high" class="priority-option">
+                            <i class="fa-solid fa-flag priority-high"></i> High Priority
+                        </button>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Filter Tabs (Mobile) -->
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="active">Active</button>
+                <button class="filter-tab" data-filter="completed">Completed</button>
+                <button class="filter-tab" data-filter="important">Important</button>
+            </div>
+            
+            <!-- Task List -->
+            <section class="task-list-section">
+                <div class="task-list-header">
+                    <h2 id="listTitle">All Tasks</h2>
+                    <span class="task-counter" id="taskCounter">0 tasks</span>
+                </div>
+                
+                <div class="task-list" id="taskList">
+                    <!-- Tasks rendered by JavaScript -->
+                </div>
+                
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h3>No tasks found</h3>
+                    <p id="emptyMessage">Add a new task to get started!</p>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
