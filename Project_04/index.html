@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>DevHire PK | Apply for Tech Jobs in Pakistan</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" onclick="showSection('home')">
+                <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+                <span>DevHire<span class="logo-dot">.</span>PK</span>
+            </a>
+            <div class="nav-links">
+                <a href="#" onclick="showSection('jobs')">Jobs</a>
+                <a href="#" onclick="showSection('companies')">Companies</a>
+                <a href="#" onclick="showSection('salaries')">Salaries</a>
+                <a href="#" class="nav-active" onclick="showSection('apply')">Apply Now</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" onclick="showSection('jobs'); closeMobileMenu()">Jobs</a>
+            <a href="#" onclick="showSection('companies'); closeMobileMenu()">Companies</a>
+            <a href="#" onclick="showSection('salaries'); closeMobileMenu()">Salaries</a>
+            <a href="#" class="nav-active" onclick="showSection('apply'); closeMobileMenu()">Apply Now</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        
+        <!-- ========== HOME SECTION ========== -->
+        <section id="section-home" class="content-section active-section">
+            <div class="job-header-card">
+                <div class="company-row">
+                    <div class="company-avatar"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="company-details">
+                        <h3>Systems Limited</h3>
+                        <span>Pakistan's Leading IT Company • Lahore</span>
+                    </div>
+                    <span class="job-badge">Urgent Hiring</span>
+                </div>
+                <h1 class="job-title">Senior Frontend Developer</h1>
+                <div class="job-meta-row">
+                    <div class="meta-item"><i class="fa-solid fa-location-dot"></i> Lahore (Hybrid)</div>
+                    <div class="meta-item"><i class="fa-solid fa-briefcase"></i> Full-Time</div>
+                    <div class="meta-item"><i class="fa-solid fa-clock"></i> Posted Today</div>
+                    <div class="meta-item salary"><i class="fa-solid fa-indian-rupee-sign"></i> PKR 350K-600K</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <div class="form-card">
+                    <div class="progress-container">
+                        <div class="progress-steps">
+                            <div class="p-step active" data-step="1"><div class="p-circle">1</div><span>Personal</span></div>
+                            <div class="p-line" id="pLine1"></div>
+                            <div class="p-step" data-step="2"><div class="p-circle">2</div><span>Skills</span></div>
+                            <div class="p-line" id="pLine2"></div>
+                            <div class="p-step" data-step="3"><div class="p-circle">3</div><span>Details</span></div>
+                            <div class="p-line" id="pLine3"></div>
+                            <div class="p-step" data-step="4"><div class="p-circle">4</div><span>Review</span></div>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                    </div>
+
+                    <div class="form-title-area">
+                        <h2 id="formTitle">Personal Information</h2>
+                        <p id="formSubtitle">Fill in your basic details to start your application</p>
+                    </div>
+
+                    <form id="applicationForm" novalidate>
+                        <div class="f-step active" id="step1">
+                            <div class="field-row">
+                                <div class="field-group">
+                                    <label for="firstName">First Name <span class="req">*</span></label>
+                                    <div class="field-wrap"><i class="fa-solid fa-user field-icon"></i><input type="text" id="firstName" class="f-input" placeholder="Ahmed" data-validate="required|min:2" /><span class="v-icon"></span></div>
+                                    <span class="f-error" id="firstNameError"></span>
+                                </div>
+                                <div class="field-group">
+                                    <label for="lastName">Last Name <span class="req">*</span></label>
+                                    <div class="field-wrap"><i class="fa-solid fa-user field-icon"></i><input type="text" id="lastName" class="f-input" placeholder="Khan" data-validate="required|min:2" /><span class="v-icon"></span></div>
+                                    <span class="f-error" id="lastNameError"></span>
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <label for="email">Email Address <span class="req">*</span></label>
+                                <div class="field-wrap"><i class="fa-solid fa-envelope field-icon"></i><input type="email" id="email" class="f-input" placeholder="ahmed.khan@email.com" data-validate="required|email" /><span class="v-icon"></span></div>
+                                <span class="f-error" id="emailError"></span>
+                            </div>
+                            <div class="field-row">
+                                <div class="field-group">
+                                    <label for="phone">Phone Number <span class="req">*</span></label>
+                                    <div class="field-wrap"><i class="fa-solid fa-mobile field-icon"></i><input type="tel" id="phone" class="f-input" placeholder="0300-1234567" data-validate="required|phone" /><span class="v-icon"></span></div>
+                                    <span class="f-error" id="phoneError"></span>
+                                </div>
+                                <div class="field-group">
+                                    <label for="cnic">CNIC Number <span class="req">*</span></label>
+                                    <div class="field-wrap"><i class="fa-solid fa-id-card field-icon"></i><input type="text" id="cnic" class="f-input" placeholder="12345-1234567-1" data-validate="required|cnic" /><span class="v-icon"></span></div>
+                                    <span class="f-error" id="cnicError"></span>
+                                </div>
+                            </div>
+                            <div class="field-row">
+                                <div class="field-group">
+                                    <label for="city">City <span class="req">*</span></label>
+                                    <div class="field-wrap"><i class="fa-solid fa-city field-icon"></i><select id="city" class="f-input f-select" data-validate="required"><option value="">Select city...</option><option>Lahore</option><option>Karachi</option><option>Islamabad</option><option>Rawalpindi</option><option>Faisalabad</option><option>Peshawar</option><option>Multan</option><option>Gujranwala</option><option>Other</option></select><span class="v-icon"></span></div>
+                                    <span class="f-error" id="cityError"></span>
+                                </div>
+                                <div class="field-group">
+                                    <label for="linkedin">LinkedIn URL</label>
+                                    <div class="field-wrap"><i class="fa-brands fa-linkedin field-icon"></i><input type="url" id="linkedin" class="f-input" placeholder="linkedin.com/in/ahmedkhan" data-validate="url" /><span class="v-icon"></span></div>
+                                    <span class="f-error" id="linkedinError"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f-step" id="step2">
+                            <div class="field-group">
+                                <label>Tech Stack <span class="req">*</span></label>
+                                <div class="skills-box">
+                                    <div class="skills-tags" id="skillsTags"></div>
+                                    <div class="skills-input-row"><input type="text" id="skillInput" class="f-input" placeholder="Type skill and press Enter..." /><button type="button" class="skill-add" id="skillAddBtn"><i class="fa-solid fa-plus"></i></button></div>
+                                </div>
+                                <span class="f-error" id="skillsError"></span>
+                            </div>
+                            <div class="skill-suggestions">
+                                <span>Popular:</span>
+                                <button type="button" class="s-chip">React.js</button><button type="button" class="s-chip">Next.js</button><button type="button" class="s-chip">TypeScript</button><button type="button" class="s-chip">Node.js</button><button type="button" class="s-chip">Laravel</button><button type="button" class="s-chip">Python</button><button type="button" class="s-chip">MERN</button><button type="button" class="s-chip">PHP</button><button type="button" class="s-chip">Flutter</button><button type="button" class="s-chip">AWS</button>
+                            </div>
+                            <div class="field-group">
+                                <label for="experience">Years of Experience <span class="req">*</span></label>
+                                <div class="field-wrap"><i class="fa-solid fa-calendar field-icon"></i><select id="experience" class="f-input f-select" data-validate="required"><option value="">Select experience...</option><option>Fresher (0-1 year)</option><option>1-2 years</option><option>2-3 years</option><option>3-5 years</option><option>5-7 years</option><option>7-10 years</option><option>10+ years</option></select><span class="v-icon"></span></div>
+                                <span class="f-error" id="experienceError"></span>
+                            </div>
+                            <div class="field-row">
+                                <div class="field-group">
+                                    <label for="portfolio">Portfolio URL</label>
+                                    <div class="field-wrap"><i class="fa-solid fa-globe field-icon"></i><input type="url" id="portfolio" class="f-input" placeholder="https://ahmedkhan.dev" data-validate="url" /><span class="v-icon"></span></div>
+                                    <span class="f-error" id="portfolioError"></span>
+                                </div>
+                                <div class="field-group">
+                                    <label for="github">GitHub Profile</label>
+                                    <div class="field-wrap"><i class="fa-brands fa-github field-icon"></i><input type="url" id="github" class="f-input" placeholder="github.com/ahmedkhan" data-validate="url" /><span class="v-icon"></span></div>
+                                    <span class="f-error" id="githubError"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="f-step" id="step3">
+                            <div class="field-group">
+                                <label for="currentRole">Current/Most Recent Role <span class="req">*</span></label>
+                                <div class="field-wrap"><i class="fa-solid fa-briefcase field-icon"></i><input type="text" id="currentRole" class="f-input" placeholder="Frontend Developer at Netsol Technologies" data-validate="required|min:5" /><span class="v-icon"></span></div>
+                                <span class="f-error" id="currentRoleError"></span>
+                            </div>
+                            <div class="field-group">
+                                <label>Expected Salary Range (PKR) <span class="req">*</span></label>
+                                <div class="salary-card">
+                                    <div class="salary-values"><div class="sal-box"><span>Min</span><strong id="salMin">PKR 100K</strong></div><div class="sal-divider"></div><div class="sal-box"><span>Max</span><strong id="salMax">PKR 600K</strong></div></div>
+                                    <div class="range-wrap"><div class="range-track"></div><input type="range" id="salaryMin" class="r-input" min="30000" max="1000000" value="100000" step="10000" /><input type="range" id="salaryMax" class="r-input" min="30000" max="1000000" value="600000" step="10000" /></div>
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <label for="coverLetter">Cover Letter <span class="req">*</span></label>
+                                <textarea id="coverLetter" class="f-input f-textarea" rows="5" placeholder="Tell us why you're the ideal candidate..." data-validate="required|min:50" maxlength="3000"></textarea>
+                                <div class="textarea-info"><span class="f-error" id="coverLetterError"></span><span class="char-count"><span id="charCount">0</span>/3000</span></div>
+                            </div>
+                            <div class="field-group">
+                                <label>Upload Resume <span class="req">*</span></label>
+                                <div class="upload-box">
+                                    <div class="upload-drop" id="uploadDrop"><i class="fa-solid fa-cloud-arrow-up"></i><p><strong>Click to upload</strong> or drag and drop</p><span>PDF, DOCX (Max 5MB)</span></div>
+                                    <div class="upload-file" id="uploadFile" style="display: none;"><i class="fa-solid fa-file-lines"></i><div><span id="uploadName"></span><small id="uploadSize"></small></div><button type="button" id="uploadRemove"><i class="fa-solid fa-trash"></i></button></div>
+                                    <input type="file" id="resume" accept=".pdf,.docx" hidden />
+                                </div>
+                                <span class="f-error" id="resumeError"></span>
+                            </div>
+                        </div>
+
+                        <div class="f-step" id="step4">
+                            <h3 class="review-title">Review Your Application</h3>
+                            <p class="review-sub">Verify all details before submitting</p>
+                            <div class="review-list" id="reviewList"></div>
+                            <label class="terms-label"><input type="checkbox" id="terms" data-validate="required" /><span class="terms-check"></span><span>I confirm all information is correct and agree to <a href="#">Terms</a> & <a href="#">Privacy Policy</a></span></label>
+                            <span class="f-error" id="termsError"></span>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-back" id="prevBtn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                            <button type="button" class="btn btn-next" id="nextBtn">Continue <i class="fa-solid fa-arrow-right"></i></button>
+                            <button type="submit" class="btn btn-submit" id="submitBtn"><i class="fa-solid fa-paper-plane"></i> Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== JOBS SECTION ========== -->
+        <section id="section-jobs" class="content-section">
+            <h2 class="section-heading"><i class="fa-solid fa-briefcase"></i> Latest Tech Jobs in Pakistan</h2>
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="jc-avatar"><i class="fa-solid fa-building"></i></div>
+                        <div><h4>Senior React Developer</h4><span>Systems Limited • Lahore</span></div>
+                        <span class="jc-badge">Full-Time</span>
+                    </div>
+                    <p class="jc-desc">Looking for an experienced React developer with 5+ years of experience in building enterprise applications.</p>
+                    <div class="jc-footer"><span class="jc-salary">PKR 350K - 600K</span><button class="jc-apply" onclick="showSection('apply')">Apply Now</button></div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="jc-avatar"><i class="fa-solid fa-building"></i></div>
+                        <div><h4>Full Stack Developer</h4><span>Netsol Technologies • Lahore</span></div>
+                        <span class="jc-badge">Full-Time</span>
+                    </div>
+                    <p class="jc-desc">Join our team to build scalable fintech solutions using MERN stack and cloud technologies.</p>
+                    <div class="jc-footer"><span class="jc-salary">PKR 250K - 450K</span><button class="jc-apply" onclick="showSection('apply')">Apply Now</button></div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="jc-avatar"><i class="fa-solid fa-building"></i></div>
+                        <div><h4>DevOps Engineer</h4><span>10Pearls • Karachi</span></div>
+                        <span class="jc-badge">Remote</span>
+                    </div>
+                    <p class="jc-desc">Experienced DevOps engineer needed for CI/CD pipeline management and cloud infrastructure.</p>
+                    <div class="jc-footer"><span class="jc-salary">PKR 300K - 500K</span><button class="jc-apply" onclick="showSection('apply')">Apply Now</button></div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="jc-avatar"><i class="fa-solid fa-building"></i></div>
+                        <div><h4>UI/UX Designer</h4><span>Arbisoft • Lahore</span></div>
+                        <span class="jc-badge">Full-Time</span>
+                    </div>
+                    <p class="jc-desc">Creative designer needed for designing intuitive user interfaces for web and mobile applications.</p>
+                    <div class="jc-footer"><span class="jc-salary">PKR 180K - 350K</span><button class="jc-apply" onclick="showSection('apply')">Apply Now</button></div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="jc-avatar"><i class="fa-solid fa-building"></i></div>
+                        <div><h4>Laravel Developer</h4><span>Contour Software • Islamabad</span></div>
+                        <span class="jc-badge">Full-Time</span>
+                    </div>
+                    <p class="jc-desc">PHP/Laravel developer with 3+ years experience for enterprise CMS development.</p>
+                    <div class="jc-footer"><span class="jc-salary">PKR 200K - 380K</span><button class="jc-apply" onclick="showSection('apply')">Apply Now</button></div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="jc-avatar"><i class="fa-solid fa-building"></i></div>
+                        <div><h4>Flutter Developer</h4><span>Techlogix • Karachi</span></div>
+                        <span class="jc-badge">Hybrid</span>
+                    </div>
+                    <p class="jc-desc">Mobile app developer with Flutter experience for cross-platform application development.</p>
+                    <div class="jc-footer"><span class="jc-salary">PKR 220K - 400K</span><button class="jc-apply" onclick="showSection('apply')">Apply Now</button></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== COMPANIES SECTION ========== -->
+        <section id="section-companies" class="content-section">
+            <h2 class="section-heading"><i class="fa-solid fa-building-columns"></i> Top Hiring Companies</h2>
+            <div class="companies-grid">
+                <div class="company-card">
+                    <div class="cc-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h4>Systems Limited</h4>
+                    <p>Pakistan's largest IT company with 5000+ employees</p>
+                    <div class="cc-stats"><span><i class="fa-solid fa-location-dot"></i> Lahore, Karachi, Islamabad</span><span><i class="fa-solid fa-users"></i> 50+ Open Positions</span></div>
+                    <button class="cc-btn" onclick="showSection('apply')">View Openings</button>
+                </div>
+                <div class="company-card">
+                    <div class="cc-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h4>Netsol Technologies</h4>
+                    <p>Global leader in fintech and asset leasing solutions</p>
+                    <div class="cc-stats"><span><i class="fa-solid fa-location-dot"></i> Lahore</span><span><i class="fa-solid fa-users"></i> 30+ Open Positions</span></div>
+                    <button class="cc-btn" onclick="showSection('apply')">View Openings</button>
+                </div>
+                <div class="company-card">
+                    <div class="cc-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h4>10Pearls</h4>
+                    <p>Digital transformation company serving Fortune 500 clients</p>
+                    <div class="cc-stats"><span><i class="fa-solid fa-location-dot"></i> Karachi, Lahore, Islamabad</span><span><i class="fa-solid fa-users"></i> 25+ Open Positions</span></div>
+                    <button class="cc-btn" onclick="showSection('apply')">View Openings</button>
+                </div>
+                <div class="company-card">
+                    <div class="cc-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h4>Arbisoft</h4>
+                    <p>AI and data-driven software solutions company</p>
+                    <div class="cc-stats"><span><i class="fa-solid fa-location-dot"></i> Lahore</span><span><i class="fa-solid fa-users"></i> 20+ Open Positions</span></div>
+                    <button class="cc-btn" onclick="showSection('apply')">View Openings</button>
+                </div>
+                <div class="company-card">
+                    <div class="cc-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h4>Contour Software</h4>
+                    <p>Part of Constellation Software Inc., serving global markets</p>
+                    <div class="cc-stats"><span><i class="fa-solid fa-location-dot"></i> Islamabad, Lahore, Karachi</span><span><i class="fa-solid fa-users"></i> 35+ Open Positions</span></div>
+                    <button class="cc-btn" onclick="showSection('apply')">View Openings</button>
+                </div>
+                <div class="company-card">
+                    <div class="cc-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h4>Techlogix</h4>
+                    <p>Enterprise software and digital banking solutions</p>
+                    <div class="cc-stats"><span><i class="fa-solid fa-location-dot"></i> Karachi, Lahore</span><span><i class="fa-solid fa-users"></i> 15+ Open Positions</span></div>
+                    <button class="cc-btn" onclick="showSection('apply')">View Openings</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SALARIES SECTION ========== -->
+        <section id="section-salaries" class="content-section">
+            <h2 class="section-heading"><i class="fa-solid fa-chart-bar"></i> Tech Salary Guide Pakistan 2025</h2>
+            <div class="salaries-grid">
+                <div class="salary-card-lg">
+                    <div class="sc-role"><i class="fa-solid fa-code"></i> Frontend Developer</div>
+                    <div class="sc-range">PKR 150K - 600K</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:70%"></div></div>
+                    <div class="sc-info"><span>Average: PKR 300K</span><span>Demand: High</span></div>
+                </div>
+                <div class="salary-card-lg">
+                    <div class="sc-role"><i class="fa-solid fa-server"></i> Backend Developer</div>
+                    <div class="sc-range">PKR 180K - 700K</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:75%"></div></div>
+                    <div class="sc-info"><span>Average: PKR 350K</span><span>Demand: Very High</span></div>
+                </div>
+                <div class="salary-card-lg">
+                    <div class="sc-role"><i class="fa-solid fa-mobile"></i> Mobile Developer</div>
+                    <div class="sc-range">PKR 160K - 550K</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:60%"></div></div>
+                    <div class="sc-info"><span>Average: PKR 280K</span><span>Demand: High</span></div>
+                </div>
+                <div class="salary-card-lg">
+                    <div class="sc-role"><i class="fa-solid fa-cloud"></i> DevOps Engineer</div>
+                    <div class="sc-range">PKR 250K - 800K</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:80%"></div></div>
+                    <div class="sc-info"><span>Average: PKR 450K</span><span>Demand: Very High</span></div>
+                </div>
+                <div class="salary-card-lg">
+                    <div class="sc-role"><i class="fa-solid fa-palette"></i> UI/UX Designer</div>
+                    <div class="sc-range">PKR 120K - 450K</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:55%"></div></div>
+                    <div class="sc-info"><span>Average: PKR 250K</span><span>Demand: Moderate</span></div>
+                </div>
+                <div class="salary-card-lg">
+                    <div class="sc-role"><i class="fa-solid fa-brain"></i> AI/ML Engineer</div>
+                    <div class="sc-range">PKR 300K - 1M</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:90%"></div></div>
+                    <div class="sc-info"><span>Average: PKR 600K</span><span>Demand: Very High</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== APPLY SECTION ========== -->
+        <section id="section-apply" class="content-section">
+            <div class="job-header-card">
+                <div class="company-row">
+                    <div class="company-avatar"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="company-details"><h3>Systems Limited</h3><span>Pakistan's Leading IT Company • Lahore</span></div>
+                    <span class="job-badge">Urgent Hiring</span>
+                </div>
+                <h1 class="job-title">Senior Frontend Developer</h1>
+                <div class="job-meta-row">
+                    <div class="meta-item"><i class="fa-solid fa-location-dot"></i> Lahore (Hybrid)</div>
+                    <div class="meta-item"><i class="fa-solid fa-briefcase"></i> Full-Time</div>
+                    <div class="meta-item"><i class="fa-solid fa-clock"></i> Posted Today</div>
+                    <div class="meta-item salary"><i class="fa-solid fa-indian-rupee-sign"></i> PKR 350K-600K</div>
+                </div>
+            </div>
+            <div class="form-section">
+                <div class="form-card">
+                    <div class="progress-container">
+                        <div class="progress-steps">
+                            <div class="p-step active" data-step="1"><div class="p-circle">1</div><span>Personal</span></div>
+                            <div class="p-line" id="pLine1b"></div>
+                            <div class="p-step" data-step="2"><div class="p-circle">2</div><span>Skills</span></div>
+                            <div class="p-line" id="pLine2b"></div>
+                            <div class="p-step" data-step="3"><div class="p-circle">3</div><span>Details</span></div>
+                            <div class="p-line" id="pLine3b"></div>
+                            <div class="p-step" data-step="4"><div class="p-circle">4</div><span>Review</span></div>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" id="progressFillB"></div></div>
+                    </div>
+                    <div class="form-title-area"><h2 id="formTitleB">Personal Information</h2><p id="formSubtitleB">Fill in your basic details</p></div>
+                    <form id="applicationFormB" novalidate>
+                        <!-- Same form fields as home section -->
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-card">
+            <div id="confettiBox"></div>
+            <div class="modal-check"><i class="fa-solid fa-check"></i></div>
+            <h2>Application Submitted!</h2>
+            <p>Thank you, <strong id="applicantName"></strong>!</p>
+            <p class="modal-sub">Your application has been received. Ref: <strong id="refNumber"></strong></p>
+            <button class="btn btn-next" id="closeModal">Apply Again</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-box" id="toastBox"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
